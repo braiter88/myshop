@@ -37,6 +37,7 @@ function initStates($stateProvider, $ocLazyLoadProvider) {
             },
             views: {
                 'content': {
+                    controller: 'AppCtrl',
                     templateUrl: '/app/views/public/home.html',
                     resolve: resolveModule([ 'UserCtrl', 'authProvider' ])
                 }

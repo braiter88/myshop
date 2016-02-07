@@ -6,6 +6,7 @@
         function($scope, $state, authProvider) {
 
             $scope.getUserInfo = function()  {
+                console.log('get');
                 $scope.Auth = authProvider.get();
             };
 

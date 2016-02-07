@@ -16,7 +16,8 @@
             };
 
             $scope.signIn = function(user) {
-                authProvider.signIn(user).$promise.then(function(response) {
+                console.log('login');
+                authProvider.signIn({id: 1}).$promise.then(function(response) {
                     $scope.getUserInfo();
                     $state.go('dashboard', {reload: true});
                 }, function(reason) {

@@ -15,7 +15,7 @@
                 resource: $resource(CONST.get('apiUrl') + '/users/:action/:id' + '.json', {action: '@action', id: '@id'}, {
                     signIn: {
                         method: 'POST',
-                        params:  {action: 'signIn'},
+                            params:  {action: 'login'},
                         transformResponse: function (response) {
                             var data = JSON.parse(response);
                             if (data.token) {
@@ -51,7 +51,7 @@
                     },
                     get: {
                         method: 'GET',
-                        params:  {action: 'getInfo'},
+                        params:  {action: 'view'},
                         transformResponse: function (response) {
                             return JSON.parse(response);
                         }
